@@ -220,6 +220,19 @@ b {
     border-radius: 16px;
     border: none;
     overflow: hidden;
+    color: #333; /* Moved from inline */
+}
+
+.code-block {
+    background: #f4f4f4;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+}
+
+.text-small-muted {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
 }
 
 .modal-header {

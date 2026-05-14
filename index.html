@@ -341,12 +341,12 @@
                 <div class="comparison-grid">
                     <div class="example-box">
                         <h6>[ TRANSICIÓN ]</h6>
-                        <p style="font-size: 0.8rem; color: var(--text-secondary);">Botón Hover</p>
+                        <p class="text-small-muted">Botón Hover</p>
                         <button class="boton-hover">¡Pruébame!</button>
                     </div>
                     <div class="example-box">
                         <h6>[ ANIMACIÓN ]</h6>
-                        <p style="font-size: 0.8rem; color: var(--text-secondary);">Pelota moviéndose</p>
+                        <p class="text-small-muted">Pelota moviéndose</p>
                         <div class="pelota"></div>
                     </div>
                 </div>
@@ -361,22 +361,23 @@
     <!-- Modal for Code Example -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
-            <div class="modal-content" style="color: #333;">
+            <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">Código de Transición</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <pre style="background: #f4f4f4; padding: 15px; border-radius: 8px;">
-.boton {
-  background: purple;
-  transition: 0.5s;
-}
+                    <pre class="code-block">
+                            .boton {
+                            background: purple;
+                            transition: 0.5s;
+                            }
 
-.boton:hover {
-  background: pink;
-  transform: scale(1.1);
-}</pre>
+                            .boton:hover {
+                            background: pink;
+                            transform: scale(1.1);
+                            }
+                    </pre>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
@@ -387,17 +388,7 @@
 
     <!-- Scripts -->
     <script src="js/bootstrap.bundle.min.js"></script>
-    <script>
-        function toggleTransform() {
-            const card = document.getElementById('card-transform');
-            card.classList.toggle('is-flipped');
-        }
-
-        // Action for Card 1 element
-        document.getElementById('demo-caja').onclick = function () {
-            this.style.backgroundColor = this.style.backgroundColor === 'rgb(139, 92, 246)' ? '#3b82f6' : '#8b5cf6';
-        };
-    </script>
+    <script src="js/main.js"></script>
     <footer class="footer">
         <p>&copy; Nohelia Barillas 2024-097536 - Actividad Animaciones en CSS </p>
     </footer>
