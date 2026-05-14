@@ -4,17 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parte Teórica</title>
+    <title>Parte Teórica - Animaciones CSS</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <header>
-
+        <h1>Animaciones en CSS</h1>
+        <p>Aprende a dominar el movimiento en la web con esta guía completa sobre transiciones, transformaciones y animaciones.</p>
     </header>
-    <main class="container-fluid">
-        <div class="card" style="width: 18rem;">
-            <img src="images/animaciones.png" class="card-img-top" alt="...">
+
+    <main>
+        <!-- Card 1: ¿Qué son las animaciones en CSS? -->
+        <div class="card">
+            <img src="images/animaciones.jpg" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">¿Qué son las animaciones en CSS?</h5>
                 <p class="card-text">
@@ -31,24 +35,26 @@
                     <li>Son más ligeras y rápidas que muchas animaciones hechas con JavaScript.</li>
                 </ul>
                 </p>
+                <div class="caja" id="demo-caja"></div>
             </div>
-            <div class="card-footer text-body-secondary">
+            <div class="card-footer">
                 Estas animaciones son muy útiles ya que permiten mejorar la experiencia del usuario y hacer que las
                 páginas sean más atractivas, dinámicas, modernas e interactivas.
             </div>
         </div>
-        <div class="card" style="width: 18rem;">
-            <img src="images/transiciones.png" class="card-img-top" alt="...">
+
+        <!-- Card 2: Transiciones en CSS -->
+        <div class="card">
+            <img src="images/transiciones.jpg" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">Transiciones en CSS</h5>
                 <p class="card-text">
                     Las transiciones en CSS permiten cambiar suavemente el valor de una propiedad cuando ocurre un
                     evento, por ejemplo cuando el usuario pasa el mouse sobre un elemento.
-
                     Se utilizan con la propiedad transition.
                     <br>
                 <h5>Propiedad transition</h5>
-                <p>
+                <p class="card-text">
                     La propiedad transition controla cómo ocurre el cambio entre un estado y otro.
                     <br>
                     Sintaxis:
@@ -59,7 +65,7 @@
                 <ul>
                     <li>
                         <h6>transition-property</h6>
-                        <p>Define qué propiedad tendrá transición.Indica qué propiedad se va a animar (color, tamaño,
+                        <p>Define qué propiedad tendrá transición. Indica qué propiedad se va a animar (color, tamaño,
                             posición, etc.).
                             <br>
                             Sintaxis:
@@ -69,20 +75,11 @@
                     </li>
                     <li>
                         <h6>transition-duration</h6>
-                        <p>Define la duración de la transición.Indica cuánto tiempo durará la animación.
+                        <p>Define la duración de la transición. Indica cuánto tiempo durará la animación.
                             <br>
                             Sintaxis:
                             <br>
                             <b>transition-duration: 1s;</b>
-                        </p>
-                    </li>
-                    <li>
-                        <h6>transition-timing-function</h6>
-                        <p>Define cuánto tiempo dura la transición.
-                            <br>
-                            Sintaxis:
-                            <br>
-                            <b>transition-duration: 2s;</b>
                         </p>
                     </li>
                     <li>
@@ -112,14 +109,291 @@
                     </li>
                 </ul>
                 </p>
+                <!-- Bootstrap Modal Trigger -->
+                <button type="button" class="button2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Ver Código CSS
+                </button>
             </div>
-            <div class="card-footer text-body-secondary">
-                Estas animaciones son muy útiles ya que permiten mejorar la experiencia del usuario y hacer que las
-                páginas sean más atractivas, dinámicas, modernas e interactivas.
+            <div class="card-footer">
+                Las transiciones nos permiten crear efectos suaves y llamativos en una página web.
+                Son fáciles de utilizar y ayudan a mejorar la apariencia visual de los elementos.
+            </div>
+        </div>
+
+        <!-- Card 3: Transformaciones en CSS -->
+        <div class="card" id="card-transform">
+            <img src="images/transformaciones.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Transformaciones en CSS</h5>
+                <p class="card-text">
+                    Las transformaciones en CSS permiten modificar la forma, tamaño o posición de un elemento.
+                    Se utilizan mediante la propiedad transform.
+                </p>
+                <br>
+                <h5>Propiedad transform</h5>
+                <p class="card-text">
+                    La propiedad transform permite aplicar diferentes efectos visuales.
+                    <br>
+                    Sintaxis:
+                    <br>
+                    <b>transform: transformation_function(parameters);</b>
+                </p>
+                <h5>Tipos de transformaciones</h5>
+                <ul>
+                    <li>
+                        <h6>translate()</h6>
+                        <p>Mueve un elemento de posición.
+                            <br>
+                            Sintaxis:
+                            <br>
+                            <b>transform: translate(50px, 20px);</b>
+                        </p>
+                    </li>
+                    <li>
+                        <h6>rotate()</h6>
+                        <p>Rota un elemento.
+                            <br>
+                            Sintaxis:
+                            <br>
+                            <b>transform: rotate(45deg);</b>
+                        </p>
+                    </li>
+                    <li>
+                        <h6>scale()</h6>
+                        <p>Aumenta o reduce el tamaño.
+                            <br>
+                            Sintaxis:
+                            <br>
+                            <b>transform: scale(1.5);</b>
+                        </p>
+                    </li>
+                    <li>
+                        <h6>skew()</h6>
+                        <p>Inclina un elemento.
+                            <br>
+                            Sintaxis:
+                            <br>
+                            <b>transform: skew(20deg);</b>
+                        </p>
+                    </li>
+                </ul>
+                <h5>Aplicaciones prácticas</h5>
+                <ul>
+                    <li>Crear botones interactivos.</li>
+                    <li>Hacer zoom en imágenes.</li>
+                    <li>Rotar íconos.</li>
+                    <li>Crear tarjetas animadas.</li>
+                    <li>Mejorar diseños modernos.</li>
+                </ul>
+                <div class="cuadro" id="demo-cuadro"></div>
+                <button class="button3" onclick="toggleTransform()">Girar Tarjeta</button>
+            </div>
+            <div class="card-footer">
+                Las transiciones nos permiten crear efectos suaves y llamativos en una página web.
+                Son fáciles de utilizar y ayudan a mejorar la apariencia visual de los elementos.
+            </div>
+        </div>
+
+        <!-- Card 4: Animaciones en CSS -->
+        <div class="card">
+            <img src="images/anima.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Animaciones en CSS</h5>
+                <p class="card-text">
+                    Las animaciones en CSS permiten crear movimientos automáticos y continuos usando @keyframes.
+                </p>
+                <br>
+                <h5>Propiedad animation</h5>
+                <p class="card-text">
+                    La propiedad animation sirve para controlar una animación.
+                </p>
+                <h5>Uso de @keyframes</h5>
+                <p class="card-text">@keyframes define los pasos de la animación.</p>
+                <h5>Aplicaciones prácticas</h5>
+                <ul>
+                    <li>
+                        <h6>animation-name</h6>
+                        <p>Indica el nombre de la animación.
+                            <br>
+                            Sintaxis:
+                            <br>
+                            <b>animation-name: mover;</b>
+                        </p>
+                    </li>
+                    <li>
+                        <h6>animation-duration</h6>
+                        <p>Indica la duración de la animación.
+                            <br>
+                            Sintaxis:
+                            <br>
+                            <b>animation-duration: 2s;</b>
+                        </p>
+                    </li>
+                    <li>
+                        <h6>animation-iteration-count</h6>
+                        <p>Indica cuántas veces se repite la animación.
+                            <br>
+                            Sintaxis:
+                            <br>
+                            <b>animation-iteration-count: infinite;</b>
+                        </p>
+                    </li>
+                    <li>
+                        <h6>animation-delay</h6>
+                        <p>Indica el tiempo de espera antes de iniciar la animación.
+                            <br>
+                            Sintaxis:
+                            <br>
+                            <b>animation-delay: 2s;</b>
+                        </p>
+                    </li>
+                    <li>
+                        <h6>animation-direction</h6>
+                        <p>Indica la dirección de la animación.
+                        <ul>
+                            <li>normal</li>
+                            <li>reverse</li>
+                            <li>alternate</li>
+                            <li>alternate-reverse</li>
+                        </ul>
+                        <br>
+                        Sintaxis:
+                        <br>
+                        <b>animation-direction: normal;</b>
+                        </p>
+                    </li>
+                </ul>
+                <div class="bola"></div>
+            </div>
+            <div class="card-footer">
+                Las animaciones en CSS permiten crear efectos más avanzados y dinámicos. Son muy útiles para dar
+                vida a una página web y captar la atención de los usuarios.
+            </div>
+        </div>
+
+        <!-- Card 5: Diferencias entre transiciones y animaciones -->
+        <div class="card">
+            <img src="images/transivsanima.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Diferencias entre transiciones y animaciones</h5>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Transiciones</th>
+                            <th>Animaciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Necesitan un evento</td>
+                            <td>Pueden ejecutarse solas</td>
+                        </tr>
+                        <tr>
+                            <td>Son simples</td>
+                            <td>Son más avanzadas</td>
+                        </tr>
+                        <tr>
+                            <td>Cambian entre dos estados</td>
+                            <td>Pueden tener varios pasos</td>
+                        </tr>
+                        <tr>
+                            <td>Usan <code>transition</code></td>
+                            <td>Usan <code>animation</code> y <code>@keyframes</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br>
+                <h5>¿Cuándo utilizar cada una?</h5>
+                <p class="card-text">
+                <h6>Usar transiciones cuando:</h6>
+                <ul>
+                    <li>Se necesita un efecto simple.</li>
+                    <li>Hay interacción del usuario.</li>
+                    <li>Se desea suavizar cambios.</li>
+                </ul>
+                <br>
+                <h6>Usar animaciones cuando:</h6>
+                <ul>
+                    <li>Se necesita un efecto complejo.</li>
+                    <li>La animación debe repetirse.</li>
+                    <li>Se quieren varios pasos o efectos automáticos.</li>
+                </ul>
+                </p>
+                <h5>Ventajas y desventajas</h5>
+                <p class="card-text">
+                <h6>Transiciones</h6>
+                <ul>
+                    <li><b>Ventajas:</b> Fáciles de usar, poco código.</li>
+                    <li><b>Desventajas:</b> Limitadas, solo cambian entre dos estados.</li>
+                </ul>
+                <h6>Animaciones</h6>
+                <ul>
+                    <li><b>Ventajas:</b> Más control, movimientos complejos.</li>
+                    <li><b>Desventajas:</b> Más código, más difíciles de configurar.</li>
+                </ul>
+                </p>
+
+                <hr>
+                <h5>Ejemplos en Vivo</h5>
+                <div class="comparison-grid">
+                    <div class="example-box">
+                        <h6>[ TRANSICIÓN ]</h6>
+                        <p style="font-size: 0.8rem; color: var(--text-secondary);">Botón Hover</p>
+                        <button class="boton-hover">Hover aquí</button>
+                    </div>
+                    <div class="example-box">
+                        <h6>[ ANIMACIÓN ]</h6>
+                        <p style="font-size: 0.8rem; color: var(--text-secondary);">Pelota moviéndose</p>
+                        <div class="pelota"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                Las transiciones y animaciones son herramientas muy importantes en CSS. Ambas ayudan a mejorar la experiencia visual de una página web.
             </div>
         </div>
     </main>
+
+    <!-- Modal for Code Example -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content" style="color: #333;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Código de Transición</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <pre style="background: #f4f4f4; padding: 15px; border-radius: 8px;">
+.boton {
+  background: purple;
+  transition: 0.5s;
+}
+
+.boton:hover {
+  background: pink;
+  transform: scale(1.1);
+}</pre>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script>
+        function toggleTransform() {
+            const card = document.getElementById('card-transform');
+            card.classList.toggle('is-flipped');
+        }
+
+        // Action for Card 1 element
+        document.getElementById('demo-caja').onclick = function () {
+            this.style.backgroundColor = this.style.backgroundColor === 'rgb(139, 92, 246)' ? '#3b82f6' : '#8b5cf6';
+        };
+    </script>
 </body>
 
 </html>
