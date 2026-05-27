@@ -603,3 +603,117 @@ footer {
     background-color: var(--accent-secondary) !important; 
     border-color: var(--accent-secondary) !important; 
 }
+
+/* --- SOLUCIONES: Navegación y tarjetas --- */
+
+.solution-card {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: var(--shadow-soft);
+    max-width: 600px;
+    margin: 0 auto;
+    border: 1px solid var(--border-color);
+}
+
+.solution-card h3 {
+    color: var(--text-primary);
+    font-weight: 800;
+}
+
+.solution-card .solution-desc {
+    color: var(--text-secondary);
+}
+
+.solution-subtitle {
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+.solution-result {
+    font-weight: bold;
+    color: var(--text-primary);
+}
+
+.solution-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+    padding: 20px;
+    background: var(--card-bg);
+    border-radius: 12px;
+    box-shadow: var(--shadow-soft);
+}
+
+.solution-nav .nav-home {
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 20px;
+}
+
+.solution-nav .nav-circle {
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.container-practice-solutions {
+    padding: 20px;
+}
+
+/* --- INDEX: Tarjeta de enlaces a soluciones --- */
+
+.card-enlaces {
+    grid-column: 1 / -1;
+}
+
+.card-enlaces .card-title {
+    text-align: center;
+}
+
+.card-enlaces .card-text {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.enlaces-grid {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 10px;
+}
+
+.enlaces-grid li {
+    padding: 0;
+}
+
+.enlaces-grid li::before {
+    content: none;
+}
+
+.enlaces-grid a {
+    display: block;
+    padding: 12px 20px;
+    background: var(--accent-secondary);
+    border-radius: 10px;
+    text-decoration: none;
+    color: var(--text-primary);
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.enlaces-grid a:hover {
+    background: var(--accent-primary);
+    transform: translateX(5px);
+}

@@ -7,51 +7,39 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="images/icon_animation.png" type="image/x-icon">
-    <style>
-        .solution-card {
-            background: var(--card-bg);
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: var(--shadow-soft);
-            max-width: 600px;
-            margin: 0 auto;
-            border: 1px solid var(--border-color);
-        }
-    </style>
 </head>
 <body class="bg-gradient-page">
     <header>
         <h1>Solución 3</h1>
-        <p style="color: var(--text-secondary); font-size: 1.2rem; margin-top: 10px; font-weight: 600;">3. Par o Impar</p>
+        <p class="solution-subtitle">3. Par o Impar</p>
     </header>
 
-    <main class="container-practice" style="padding: 20px;">
+    <main class="container-practice container-practice-solutions">
         
-        <nav style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-bottom: 30px; padding: 20px; background: var(--card-bg); border-radius: 12px; box-shadow: var(--shadow-soft);">
-            <a href="index.html" class="btn btn-outline-primary" style="border-radius: 50px; display: flex; align-items: center; justify-content: center; padding: 8px 20px;">🏠 Menú Principal</a>
-            <a href="solucion1.html" class="btn btn-primary" style="border-radius: 50%; width: 45px; height: 45px; display: flex; align-items: center; justify-content: center; padding: 0;">1</a>
-            <a href="solucion2.html" class="btn btn-primary" style="border-radius: 50%; width: 45px; height: 45px; display: flex; align-items: center; justify-content: center; padding: 0;">2</a>
-            <a href="solucion3.html" class="btn btn-primary" style="border-radius: 50%; width: 45px; height: 45px; display: flex; align-items: center; justify-content: center; padding: 0;">3</a>
-            <a href="solucion4.html" class="btn btn-primary" style="border-radius: 50%; width: 45px; height: 45px; display: flex; align-items: center; justify-content: center; padding: 0;">4</a>
-            <a href="solucion5.html" class="btn btn-primary" style="border-radius: 50%; width: 45px; height: 45px; display: flex; align-items: center; justify-content: center; padding: 0;">5</a>
-            <a href="solucion6.html" class="btn btn-primary" style="border-radius: 50%; width: 45px; height: 45px; display: flex; align-items: center; justify-content: center; padding: 0;">6</a>
-            <a href="solucion7.html" class="btn btn-primary" style="border-radius: 50%; width: 45px; height: 45px; display: flex; align-items: center; justify-content: center; padding: 0;">7</a>
-            <a href="solucion8.html" class="btn btn-primary" style="border-radius: 50%; width: 45px; height: 45px; display: flex; align-items: center; justify-content: center; padding: 0;">8</a>
-            <a href="solucion9.html" class="btn btn-primary" style="border-radius: 50%; width: 45px; height: 45px; display: flex; align-items: center; justify-content: center; padding: 0;">9</a>
-            <a href="solucion10.html" class="btn btn-primary" style="border-radius: 50%; width: 45px; height: 45px; display: flex; align-items: center; justify-content: center; padding: 0;">10</a>
+        <nav class="solution-nav">
+            <a href="index.html" class="btn btn-outline-primary nav-home">🏠 Menú Principal</a>
+            <a href="solucion1.html" class="btn btn-primary nav-circle">1</a>
+            <a href="solucion2.html" class="btn btn-primary nav-circle">2</a>
+            <a href="solucion3.html" class="btn btn-primary nav-circle">3</a>
+            <a href="solucion4.html" class="btn btn-primary nav-circle">4</a>
+            <a href="solucion5.html" class="btn btn-primary nav-circle">5</a>
+            <a href="solucion6.html" class="btn btn-primary nav-circle">6</a>
+            <a href="solucion7.html" class="btn btn-primary nav-circle">7</a>
+            <a href="solucion8.html" class="btn btn-primary nav-circle">8</a>
+            <a href="solucion9.html" class="btn btn-primary nav-circle">9</a>
+            <a href="solucion10.html" class="btn btn-primary nav-circle">10</a>
         </nav>
 
 
-        
         <section class="practice-section">
             <div class="solution-card text-center">
-                <h3 style="color: var(--text-primary); font-weight: 800;">3. Par o Impar</h3>
-                <p style="color: var(--text-secondary);">Determina si un número es par o impar.</p>
+                <h3>3. Par o Impar</h3>
+                <p class="solution-desc">Determina si un número es par o impar.</p>
                 <div class="mt-4 text-start">
                     
             <input type="number" id="num" class="form-control mb-2" placeholder="Ingresa un número">
             <button class="btn btn-primary mt-2" onclick="verificarPar()">Verificar</button>
-            <p id="res3" class="mt-3" style="font-weight: bold; color: green;"></p>
+            <p id="res3" class="mt-3" style="font-weight: bold; color: var(--text-primary);"></p>
         
                 </div>
             </div>
