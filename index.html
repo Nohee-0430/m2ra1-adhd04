@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parte Teórica - Animaciones CSS</title>
+    <title>Cuestionario - TypeScript</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="images/icon_animation.png" type="image/x-icon">
@@ -15,383 +15,133 @@
         <div class="header-icon-container">
             <img src="images/icon_animation.png" alt="Icono Animación" class="header-icon" width="150">
         </div>
-        <h1>Animaciones en CSS</h1>
+        <h1>Cuestionario de TypeScript</h1>
         <a href="page1.html" class="nav-link-premium">Ver Parte Práctica →</a>
     </header>
 
     <main>
-        <!-- Card 1: ¿Qué son las animaciones en CSS? -->
+        <!-- Card 1: Conceptos Básicos de TypeScript -->
         <div class="card">
             <img src="images/animaciones.jpg" class="card-img-top" alt="...">
             <div class="card-body">
-                <h5 class="card-title">¿Qué son las animaciones en CSS?</h5>
+                <h5 class="card-title">Conceptos Básicos de TypeScript</h5>
                 <p class="card-text">
-                    Las animaciones en CSS permiten agregar movimiento y efectos visuales a los elementos de una página
-                    web sin necesidad de usar JavaScript. Gracias a ellas, los sitios web se ven más dinámicos, modernos
-                    e interactivos.
-                    <br>
-                <h5>Ventajas y usos principales</h5>
-                <ul>
-                    <li>Mejoran la experiencia del usuario.</li>
-                    <li>Hacen que las páginas sean más atractivas.</li>
-                    <li>Ayudan a destacar información importante.</li>
-                    <li>Permiten crear efectos modernos sin mucho código.</li>
-                    <li>Son más ligeras y rápidas que muchas animaciones hechas con JavaScript.</li>
-                </ul>
+                    <strong>¿Qué es TypeScript?</strong><br>
+                    <span>TypeScript es un lenguaje de programación de código abierto desarrollado por Microsoft. Es un superconjunto tipado de JavaScript, lo que significa que añade tipos estáticos opcionales a JavaScript, ayudando a detectar errores antes de ejecutar el código.</span>
                 </p>
-                <div class="caja" id="demo-caja"></div>
+                <p class="card-text">
+                    <strong>¿Qué ventajas ofrece TypeScript frente a JavaScript puro?</strong><br>
+                    <span>Ofrece detección temprana de errores durante el desarrollo, mejor autocompletado en los editores de código, facilita el mantenimiento y escalabilidad de aplicaciones grandes, y permite usar características modernas de JavaScript con soporte para navegadores más antiguos.</span>
+                </p>
+                <p class="card-text">
+                    <strong>¿Qué extensión de archivo se utiliza para los archivos TypeScript?</strong><br>
+                    <span>La extensión estándar para los archivos de TypeScript es <code>.ts</code>. Si el archivo contiene sintaxis de React (JSX), la extensión utilizada es <code>.tsx</code>.</span>
+                </p>
             </div>
             <div class="card-footer">
-                Estas animaciones son muy útiles ya que permiten mejorar la experiencia del usuario y hacer que las
-                páginas sean más atractivas, dinámicas, modernas e interactivas.
+                Estos son los conceptos fundamentales para entender qué es TypeScript y por qué se utiliza.
             </div>
         </div>
 
-        <!-- Card 2: Transiciones en CSS -->
+        <!-- Card 2: Instalación y Compilación -->
         <div class="card">
             <img src="images/transiciones.jpg" class="card-img-top" alt="...">
             <div class="card-body">
-                <h5 class="card-title">Transiciones en CSS</h5>
+                <h5 class="card-title">Instalación y Compilación</h5>
                 <p class="card-text">
-                    Las transiciones en CSS permiten cambiar suavemente el valor de una propiedad cuando ocurre un
-                    evento, por ejemplo cuando el usuario pasa el mouse sobre un elemento.
-                    Se utilizan con la propiedad transition.
-                    <br>
-                <h5>Propiedad transition</h5>
+                    <strong>¿Cómo se instala TypeScript en VSCode?</strong><br>
+                    <span>TypeScript se instala globalmente en el sistema mediante Node.js y npm usando el comando <code>npm install -g typescript</code> en la terminal. VS Code ya trae soporte incorporado para TypeScript, por lo que una vez instalado el compilador, el editor lo reconocerá automáticamente.</span>
+                </p>
                 <p class="card-text">
-                    La propiedad transition controla cómo ocurre el cambio entre un estado y otro.
-                    <br>
-                    Sintaxis:
-                    <br>
-                    <b>transition: propiedad duración efecto retraso;</b>
+                    <strong>¿Cómo se compila un archivo TypeScript para convertirlo a JavaScript?</strong><br>
+                    <span>Se compila usando el comando <code>tsc</code> seguido del nombre del archivo en la terminal. Por ejemplo: <code>tsc archivo.ts</code>. Esto generará un nuevo archivo <code>archivo.js</code> con el código equivalente en JavaScript puro que los navegadores pueden entender.</span>
                 </p>
-                <h5>Parámetros Principales</h5>
-                <ul>
-                    <li>
-                        <h6>transition-property</h6>
-                        <p>Define qué propiedad tendrá transición. Indica qué propiedad se va a animar (color, tamaño,
-                            posición, etc.).
-                            <br>
-                            Sintaxis:
-                            <br>
-                            <b>transition-property: background;</b>
-                        </p>
-                    </li>
-                    <li>
-                        <h6>transition-duration</h6>
-                        <p>Define la duración de la transición. Indica cuánto tiempo durará la animación.
-                            <br>
-                            Sintaxis:
-                            <br>
-                            <b>transition-duration: 1s;</b>
-                        </p>
-                    </li>
-                    <li>
-                        <h6>transition-timing-function</h6>
-                        <p>Controla la velocidad de la animación.
-                        <ul>
-                            <li>ease (predeterminado): empieza lento, acelera y termina lento.</li>
-                            <li>linear: velocidad constante.</li>
-                            <li>ease-in: empieza lento y acelera.</li>
-                            <li>ease-out: empieza rápido y termina lento.</li>
-                            <li>ease-in-out: empieza lento, acelera y termina lento.</li>
-                        </ul>
-                        <br>
-                        Sintaxis:
-                        <br>
-                        <b>transition-timing-function: ease;</b>
-                        </p>
-                    </li>
-                    <li>
-                        <h6>transition-delay</h6>
-                        <p>Define cuánto tiempo espera antes de iniciar.
-                            <br>
-                            Sintaxis:
-                            <br>
-                            <b>transition-delay: 2s;</b>
-                        </p>
-                    </li>
-                </ul>
-                </p>
-                <!-- Bootstrap Modal Trigger -->
-                <button type="button" class="button2" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    Ver Código CSS
-                </button>
             </div>
             <div class="card-footer">
-                Las transiciones nos permiten crear efectos suaves y llamativos en una página web.
-                Son fáciles de utilizar y ayudan a mejorar la apariencia visual de los elementos.
+                La configuración adecuada del entorno es esencial para trabajar con TypeScript.
             </div>
         </div>
 
-        <!-- Card 3: Transformaciones en CSS -->
-        <div class="card" id="card-transform">
+        <!-- Card 3: Tipos de Datos en TypeScript -->
+        <div class="card">
             <img src="images/transformaciones.jpg" class="card-img-top" alt="...">
             <div class="card-body">
-                <h5 class="card-title">Transformaciones en CSS</h5>
+                <h5 class="card-title">Tipos de Datos en TypeScript</h5>
                 <p class="card-text">
-                    Las transformaciones en CSS permiten modificar la forma, tamaño o posición de un elemento.
-                    Se utilizan mediante la propiedad transform.
+                    <strong>¿Cómo se define un tipo de dato en TypeScript?</strong><br>
+                    <span>Se define utilizando dos puntos (<code>:</code>) seguido del tipo de dato después del nombre de la variable. Por ejemplo: <code>let edad: number = 25;</code> o <code>let nombre: string = "Juan";</code>.</span>
                 </p>
-                <br>
-                <h5>Propiedad transform</h5>
                 <p class="card-text">
-                    La propiedad transform permite aplicar diferentes efectos visuales.
-                    <br>
-                    Sintaxis:
-                    <br>
-                    <b>transform: transformation_function(parameters);</b>
+                    <strong>¿Qué son los tipos de unión y cómo se declaran?</strong><br>
+                    <span>Los tipos de unión permiten que una variable pueda almacenar más de un tipo de dato especificado. Se declaran utilizando el símbolo de tubería (<code>|</code>). Por ejemplo: <code>let identificador: string | number;</code>.</span>
                 </p>
-                <h5>Tipos de transformaciones</h5>
-                <ul>
-                    <li>
-                        <h6>translate()</h6>
-                        <p>Mueve un elemento de posición.
-                            <br>
-                            Sintaxis:
-                            <br>
-                            <b>transform: translate(50px, 20px);</b>
-                        </p>
-                    </li>
-                    <li>
-                        <h6>rotate()</h6>
-                        <p>Rota un elemento.
-                            <br>
-                            Sintaxis:
-                            <br>
-                            <b>transform: rotate(45deg);</b>
-                        </p>
-                    </li>
-                    <li>
-                        <h6>scale()</h6>
-                        <p>Aumenta o reduce el tamaño.
-                            <br>
-                            Sintaxis:
-                            <br>
-                            <b>transform: scale(1.5);</b>
-                        </p>
-                    </li>
-                    <li>
-                        <h6>skew()</h6>
-                        <p>Inclina un elemento.
-                            <br>
-                            Sintaxis:
-                            <br>
-                            <b>transform: skew(20deg);</b>
-                        </p>
-                    </li>
-                </ul>
-                <h5>Aplicaciones prácticas</h5>
-                <ul>
-                    <li>Crear botones interactivos.</li>
-                    <li>Hacer zoom en imágenes.</li>
-                    <li>Rotar íconos.</li>
-                    <li>Crear tarjetas animadas.</li>
-                    <li>Mejorar diseños modernos.</li>
-                </ul>
-                <div class="cuadro" id="demo-cuadro"></div>
-                <button class="button3" onclick="toggleTransform()">Girar Tarjeta</button>
+                <p class="card-text">
+                    <strong>¿Qué es un tipo literal en TypeScript y para qué se utiliza?</strong><br>
+                    <span>Un tipo literal restringe una variable a un valor exacto o a un conjunto de valores específicos en lugar de un tipo general. Se utiliza frecuentemente junto con tipos de unión. Por ejemplo: <code>let estado: "activo" | "inactivo";</code>.</span>
+                </p>
+                <p class="card-text">
+                    <strong>¿Qué son los tipos enumerados (Enums) y cómo se crean?</strong><br>
+                    <span>Los Enums permiten definir un conjunto de constantes con nombre, haciendo el código más legible e intencional. Se crean con la palabra clave <code>enum</code>. Por ejemplo: <code>enum Direccion { Arriba, Abajo, Izquierda, Derecha }</code>.</span>
+                </p>
+                <p class="card-text">
+                    <strong>¿Cómo se define un tipo alias y cuándo es útil?</strong><br>
+                    <span>Un alias de tipo permite darle un nombre personalizado a un tipo existente usando la palabra clave <code>type</code>. Es muy útil para reutilizar tipos complejos (como objetos o uniones) en diferentes partes del código sin tener que reescribirlos. Ejemplo: <code>type ID = string | number;</code>.</span>
+                </p>
             </div>
             <div class="card-footer">
-                Las transiciones nos permiten crear efectos suaves y llamativos en una página web.
-                Son fáciles de utilizar y ayudan a mejorar la apariencia visual de los elementos.
+                El sistema de tipos es la característica principal de TypeScript.
             </div>
         </div>
 
-        <!-- Card 4: Animaciones en CSS -->
+        <!-- Card 4: Funciones en TypeScript -->
         <div class="card">
             <img src="images/anima.jpg" class="card-img-top" alt="...">
             <div class="card-body">
-                <h5 class="card-title">Animaciones en CSS</h5>
+                <h5 class="card-title">Funciones en TypeScript</h5>
                 <p class="card-text">
-                    Las animaciones en CSS permiten crear movimientos automáticos y continuos usando @keyframes.
+                    <strong>¿Cómo se definen las funciones con tipos en TypeScript?</strong><br>
+                    <span>Se pueden definir tipos tanto para los parámetros de entrada como para el valor de retorno de la función. Por ejemplo: <code>function sumar(a: number, b: number): number { return a + b; }</code>.</span>
                 </p>
-                <br>
-                <h5>Propiedad animation</h5>
                 <p class="card-text">
-                    La propiedad animation sirve para controlar una animación.
+                    <strong>¿Qué son los parámetros opcionales y los parámetros predeterminados en funciones?</strong><br>
+                    <span>Los <strong>parámetros opcionales</strong> se indican con un signo de interrogación (<code>?</code>) al final del nombre y pueden omitirse al llamar a la función. Los <strong>parámetros predeterminados</strong> tienen un valor asignado directamente en la declaración (<code>param: tipo = valor</code>), que se usará si no se proporciona ese argumento.</span>
                 </p>
-                <h5>Uso de @keyframes</h5>
-                <p class="card-text">@keyframes define los pasos de la animación.</p>
-                <h5>Aplicaciones prácticas</h5>
-                <ul>
-                    <li>
-                        <h6>animation-name</h6>
-                        <p>Indica el nombre de la animación.
-                            <br>
-                            Sintaxis:
-                            <br>
-                            <b>animation-name: mover;</b>
-                        </p>
-                    </li>
-                    <li>
-                        <h6>animation-duration</h6>
-                        <p>Indica la duración de la animación.
-                            <br>
-                            Sintaxis:
-                            <br>
-                            <b>animation-duration: 2s;</b>
-                        </p>
-                    </li>
-                    <li>
-                        <h6>animation-iteration-count</h6>
-                        <p>Indica cuántas veces se repite la animación.
-                            <br>
-                            Sintaxis:
-                            <br>
-                            <b>animation-iteration-count: infinite;</b>
-                        </p>
-                    </li>
-                    <li>
-                        <h6>animation-delay</h6>
-                        <p>Indica el tiempo de espera antes de iniciar la animación.
-                            <br>
-                            Sintaxis:
-                            <br>
-                            <b>animation-delay: 2s;</b>
-                        </p>
-                    </li>
-                    <li>
-                        <h6>animation-direction</h6>
-                        <p>Indica la dirección de la animación.
-                        <ul>
-                            <li>normal</li>
-                            <li>reverse</li>
-                            <li>alternate</li>
-                            <li>alternate-reverse</li>
-                        </ul>
-                        <br>
-                        Sintaxis:
-                        <br>
-                        <b>animation-direction: normal;</b>
-                        </p>
-                    </li>
-                </ul>
-                <div class="bola"></div>
             </div>
             <div class="card-footer">
-                Las animaciones en CSS permiten crear efectos más avanzados y dinámicos. Son muy útiles para dar
-                vida a una página web y captar la atención de los usuarios.
+                Tipar correctamente las funciones previene muchos errores en tiempo de ejecución.
             </div>
         </div>
 
-        <!-- Card 5: Diferencias entre transiciones y animaciones -->
+        <!-- Card 5: Mejores Prácticas -->
         <div class="card">
             <img src="images/transivsanima.jpg" class="card-img-top" alt="...">
             <div class="card-body">
-                <h5 class="card-title">Diferencias entre transiciones y animaciones</h5>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Transiciones</th>
-                            <th>Animaciones</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Necesitan un evento</td>
-                            <td>Pueden ejecutarse solas</td>
-                        </tr>
-                        <tr>
-                            <td>Son simples</td>
-                            <td>Son más avanzadas</td>
-                        </tr>
-                        <tr>
-                            <td>Cambian entre dos estados</td>
-                            <td>Pueden tener varios pasos</td>
-                        </tr>
-                        <tr>
-                            <td>Usan <code>transition</code></td>
-                            <td>Usan <code>animation</code> y <code>@keyframes</code></td>
-                        </tr>
-                    </tbody>
-                </table>
-                <br>
-                <h5>¿Cuándo utilizar cada una?</h5>
+                <h5 class="card-title">Mejores Prácticas</h5>
                 <p class="card-text">
-                <h6>Usar transiciones cuando:</h6>
-                <ul>
-                    <li>Se necesita un efecto simple.</li>
-                    <li>Hay interacción del usuario.</li>
-                    <li>Se desea suavizar cambios.</li>
-                </ul>
-                <br>
-                <h6>Usar animaciones cuando:</h6>
-                <ul>
-                    <li>Se necesita un efecto complejo.</li>
-                    <li>La animación debe repetirse.</li>
-                    <li>Se quieren varios pasos o efectos automáticos.</li>
-                </ul>
+                    <strong>¿Cuáles son algunas mejores prácticas para escribir código limpio y mantenible en TypeScript?</strong><br>
+                    <span>
+                        <ul>
+                            <li>Usar tipos estrictos y evitar usar el tipo <code>any</code> en lo posible.</li>
+                            <li>Activar el modo estricto (<code>"strict": true</code>) en el archivo de configuración <code>tsconfig.json</code>.</li>
+                            <li>Usar <code>interfaces</code> para definir la forma de los objetos.</li>
+                            <li>Aprovechar los Enums o tipos de unión para valores restringidos.</li>
+                            <li>Mantener funciones y clases pequeñas y con una única responsabilidad.</li>
+                            <li>Usar nombres descriptivos para variables, funciones y tipos personalizados.</li>
+                        </ul>
+                    </span>
                 </p>
-                <h5>Ventajas y desventajas</h5>
-                <p class="card-text">
-                <h6>Transiciones</h6>
-                <ul>
-                    <li><b>Ventajas:</b> Fáciles de usar, poco código.</li>
-                    <li><b>Desventajas:</b> Limitadas, solo cambian entre dos estados.</li>
-                </ul>
-                <h6>Animaciones</h6>
-                <ul>
-                    <li><b>Ventajas:</b> Más control, movimientos complejos.</li>
-                    <li><b>Desventajas:</b> Más código, más difíciles de configurar.</li>
-                </ul>
-                </p>
-
-                <hr>
-                <h5>Ejemplos en Vivo</h5>
-                <div class="comparison-grid">
-                    <div class="example-box">
-                        <h6>[ TRANSICIÓN ]</h6>
-                        <p class="text-small-muted">Botón Hover</p>
-                        <button class="boton-hover">¡Pruébame!</button>
-                    </div>
-                    <div class="example-box">
-                        <h6>[ ANIMACIÓN ]</h6>
-                        <p class="text-small-muted">Pelota moviéndose</p>
-                        <div class="pelota"></div>
-                    </div>
-                </div>
             </div>
             <div class="card-footer">
-                Las transiciones y animaciones son herramientas muy importantes en CSS. Ambas ayudan a mejorar la
-                experiencia visual de una página web.
+                Aplicar mejores prácticas asegura que el código sea escalable y fácil de entender.
             </div>
         </div>
     </main>
-
-    <!-- Modal for Code Example -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Código de Transición</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <pre class="code-block">
-                            .boton {
-                            background: purple;
-                            transition: 0.5s;
-                            }
-
-                            .boton:hover {
-                            background: pink;
-                            transform: scale(1.1);
-                            }
-                    </pre>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- Scripts -->
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>
     <footer class="footer">
-        <p>&copy; Nohelia Barillas 2024-097536 - Actividad Animaciones en CSS </p>
+        <p>&copy; Nohelia Barillas 2024-097536 - Cuestionario TypeScript</p>
     </footer>
 </body>
 
