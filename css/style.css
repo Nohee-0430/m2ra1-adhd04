@@ -1,15 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap');
 
 :root {
-    --bg-color: #f1f5f9;
-    --card-bg: #ffffff;
-    --accent-primary: #3b82f6; /* Modern Blue */
-    --accent-secondary: #8b5cf6; /* Modern Purple */
-    --text-primary: #0f172a; /* Dark Slate */
-    --text-secondary: #64748b; /* Slate 500 */
-    --border-color: #e2e8f0;
-    --shadow-soft: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-    --shadow-hover: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    --bg-color: #FDFFF4; /* Ivory */
+    --card-bg: #F6F3C8; /* Lemon Chiffon */
+    --accent-primary: #F5ABA4; /* Powder Blush */
+    --accent-secondary: #EAD392; /* Vanilla Custard */
+    --text-primary: #5c5417; /* Darker gold for text readability */
+    --text-secondary: #8c8128; /* Medium-dark gold */
+    --border-color: #BAAB35; /* Old Gold */
+    --shadow-soft: 0 4px 6px -1px rgba(186, 171, 53, 0.15), 0 2px 4px -2px rgba(186, 171, 53, 0.15);
+    --shadow-hover: 0 20px 25px -5px rgba(245, 171, 164, 0.3), 0 8px 10px -6px rgba(245, 171, 164, 0.3);
 }
 
 * {
@@ -32,7 +32,7 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: radial-gradient(circle at center, #ffffff 0%, #f1f5f9 100%);
+    background: radial-gradient(circle at center, var(--card-bg) 0%, var(--bg-color) 100%);
     text-align: center;
     padding: 4rem 2rem;
     border-bottom: 1px solid var(--border-color);
@@ -43,19 +43,19 @@ header {
     margin-top: 1.5rem;
     padding: 12px 30px;
     background: linear-gradient(to right, var(--accent-primary), var(--accent-secondary));
-    color: white !important;
+    color: var(--text-primary) !important;
     text-decoration: none !important;
     border-radius: 50px;
-    font-weight: 600;
+    font-weight: 800;
     font-size: 1.1rem;
-    box-shadow: 0 10px 20px rgba(59, 130, 246, 0.2);
+    box-shadow: 0 10px 20px rgba(245, 171, 164, 0.3);
     transition: all 0.4s ease;
     animation: fadeInUp 1s ease-out 0.3s backwards;
 }
 
 .nav-link-premium:hover {
     transform: translateY(-5px) scale(1.05);
-    box-shadow: 0 15px 30px rgba(59, 130, 246, 0.4);
+    box-shadow: 0 15px 30px rgba(234, 211, 146, 0.5);
     letter-spacing: 1px;
 }
 
@@ -69,7 +69,7 @@ header {
     height: auto !important;
     display: block;
     margin: 0 auto;
-    filter: drop-shadow(0 15px 25px rgba(0,0,0,0.1));
+    filter: drop-shadow(0 15px 25px rgba(186, 171, 53, 0.2));
     animation: float 4s ease-in-out infinite;
 }
 
@@ -81,7 +81,7 @@ header {
 header h1 {
     font-size: clamp(2.5rem, 8vw, 4rem);
     font-weight: 800;
-    background: linear-gradient(to right, var(--accent-primary), var(--accent-secondary));
+    background: linear-gradient(to right, var(--accent-primary), var(--border-color));
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -140,7 +140,7 @@ main {
 
 .card-title {
     font-size: 1.5rem;
-    font-weight: 700;
+    font-weight: 800;
     margin-bottom: 1rem;
     color: var(--text-primary);
 }
@@ -153,7 +153,7 @@ main {
 .card h5 {
     margin-top: 1.5rem;
     color: var(--text-primary);
-    font-weight: 600;
+    font-weight: 700;
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -192,20 +192,21 @@ ul li::before {
 
 .card-footer {
     padding: 1.2rem 2rem;
-    background: #f8fafc;
+    background: var(--accent-secondary);
     border-top: 1px solid var(--border-color);
     font-size: 0.85rem;
-    color: var(--text-secondary);
+    color: var(--text-primary);
     font-style: italic;
+    font-weight: 600;
 }
 
 /* Preserving code/bold styles */
 code,
 b {
-    color: var(--accent-secondary);
+    color: var(--border-color);
     font-family: 'Outfit', sans-serif;
     font-weight: 600;
-    background: rgba(139, 92, 246, 0.05);
+    background: rgba(186, 171, 53, 0.1);
     padding: 0.1rem 0.3rem;
     border-radius: 4px;
 }
@@ -220,11 +221,12 @@ b {
     border-radius: 16px;
     border: none;
     overflow: hidden;
-    color: #333; /* Moved from inline */
+    color: var(--text-primary);
 }
 
 .code-block {
-    background: #f4f4f4;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
     padding: 15px;
     border-radius: 8px;
     font-size: 0.9rem;
@@ -254,19 +256,19 @@ th, td {
 
 th {
     color: var(--accent-primary);
-    font-weight: 700;
+    font-weight: 800;
 }
 
 /* Buttons */
 .button2, .button3, .boton {
     background: var(--accent-primary);
-    color: white;
+    color: var(--text-primary);
     border: none;
     padding: 10px 20px;
     border-radius: 8px;
     cursor: pointer;
     transition: 0.3s;
-    font-weight: 600;
+    font-weight: 800;
     margin-top: 1rem;
     align-self: flex-start;
 }
@@ -297,7 +299,7 @@ th {
 .cuadro {
     width: 60px;
     height: 60px;
-    background: #f59e0b; /* Orange */
+    background: var(--border-color);
     transition: 0.4s;
 }
 
@@ -315,7 +317,8 @@ th {
 }
 
 .example-box {
-    background: #f8fafc;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
     padding: 1rem;
     border-radius: 12px;
     display: flex;
@@ -325,8 +328,8 @@ th {
 }
 
 .boton-hover {
-    background: purple;
-    color: white;
+    background: var(--accent-secondary);
+    color: var(--text-primary);
     padding: 15px 30px;
     border: none;
     border-radius: 8px;
@@ -336,20 +339,20 @@ th {
     letter-spacing: 1px;
     transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     width: fit-content;
-    box-shadow: 0 4px 0px darkmagenta;
+    box-shadow: 0 4px 0px var(--border-color);
 }
 
 .boton-hover:hover {
-    background: #ff0080; /* Brighter Pink */
+    background: var(--accent-primary);
     transform: scale(1.1) rotate(5deg);
     border-radius: 50px;
-    box-shadow: 0 0 20px rgba(255, 0, 128, 0.6), 0 10px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 20px rgba(245, 171, 164, 0.6), 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .pelota {
     width: 60px;
     height: 60px;
-    background: blue;
+    background: var(--accent-primary);
     border-radius: 50%;
     animation: moverPelota 2s infinite alternate;
 }
@@ -357,7 +360,7 @@ th {
 .bola {
     width: 100px;
     height: 100px;
-    background: blue;
+    background: var(--border-color);
     border-radius: 50%;
     margin: 20px auto;
     animation: mover 3s infinite alternate;
@@ -384,7 +387,7 @@ th {
 /* --- PAGE 1: PRACTICAL LABORATORY --- */
 
 .bg-gradient-page {
-    background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+    background: linear-gradient(135deg, var(--bg-color) 0%, var(--card-bg) 100%);
     min-height: 100vh;
 }
 
@@ -408,7 +411,7 @@ th {
 .section-title {
     font-size: 1.1rem;
     font-weight: 800;
-    color: var(--accent-secondary);
+    color: var(--text-primary);
     margin-bottom: 0;
     text-transform: uppercase;
     letter-spacing: 0.5px;
@@ -427,10 +430,11 @@ th {
 }
 
 .practice-card {
-    background: #ffffff;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
     padding: 2rem;
     border-radius: 20px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    box-shadow: 0 10px 25px rgba(186, 171, 53, 0.1);
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
@@ -443,7 +447,7 @@ th {
 .practice-card h3 {
     font-size: 1.2rem;
     color: var(--text-primary);
-    font-weight: 700;
+    font-weight: 800;
 }
 
 .practice-card p {
@@ -453,8 +457,9 @@ th {
 
 /* 1. Transitions */
 .btn-transition-color {
-    background: #8b5cf6;
-    color: white;
+    background: var(--accent-secondary);
+    color: var(--text-primary);
+    font-weight: 800;
     padding: 12px 24px;
     border: none;
     border-radius: 12px;
@@ -463,13 +468,13 @@ th {
 }
 
 .btn-transition-color:hover {
-    background-color: #ec4899; /* Transitions to Pink */
+    background-color: var(--accent-primary);
     transform: translateY(-3px);
 }
 
 .card-grow:hover {
     transform: scale(1.05);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    box-shadow: 0 20px 40px rgba(186, 171, 53, 0.2);
 }
 
 /* 2. Transformations */
@@ -490,12 +495,12 @@ th {
     border-radius: 12px;
     transition: transform 0.4s ease;
     font-size: 0.8rem;
-    font-weight: 600;
+    font-weight: 800;
 }
 
 .box-scale {
     background: var(--accent-primary);
-    color: white;
+    color: var(--text-primary);
 }
 
 .box-scale:hover {
@@ -504,7 +509,7 @@ th {
 
 .box-translate {
     background: var(--accent-secondary);
-    color: white;
+    color: var(--text-primary);
 }
 
 .box-translate:hover {
@@ -515,19 +520,19 @@ th {
 .moving-element {
     width: 50px;
     height: 50px;
-    background: #f59e0b;
+    background: var(--border-color);
     border-radius: 50%;
     animation: bounce 2s infinite alternate ease-in-out;
 }
 
 @keyframes bounce {
     from { transform: translateY(0); }
-    to { transform: translateY(-50px); background: #ef4444; }
+    to { transform: translateY(-50px); background: var(--accent-primary); }
 }
 
 .text-fade {
     animation: fadeEffect 3s infinite;
-    color: var(--accent-secondary);
+    color: var(--border-color);
     font-weight: 800;
 }
 
@@ -545,7 +550,7 @@ th {
 .custom-loader {
     width: 50px;
     height: 50px;
-    border: 5px solid #e2e8f0;
+    border: 5px solid var(--bg-color);
     border-top: 5px solid var(--accent-primary);
     border-radius: 50%;
     animation: spin 1s linear infinite;
@@ -558,7 +563,8 @@ th {
 footer {
     text-align: center;
     padding: 3rem;
-    color: var(--text-secondary);
+    color: var(--text-primary);
+    font-weight: 600;
     font-size: 0.85rem;
 }
 
@@ -575,5 +581,25 @@ footer {
 
 @media (max-width: 768px) {
     header { min-height: auto; padding: 4rem 1rem; margin-bottom: 2rem; }
-    main { grid-template-columns: 1fr; gap: 1.5rem; padding: 0 1rem; }
+}
+
+/* Bootstrap Overrides */
+.btn-primary { 
+    background-color: var(--accent-primary) !important; 
+    border-color: var(--accent-primary) !important; 
+    color: var(--text-primary) !important; 
+    font-weight: 800; 
+} 
+.btn-primary:hover { 
+    background-color: var(--accent-secondary) !important; 
+    border-color: var(--accent-secondary) !important; 
+} 
+.btn-outline-primary { 
+    color: var(--text-primary) !important; 
+    border-color: var(--border-color) !important; 
+    font-weight: 800; 
+} 
+.btn-outline-primary:hover { 
+    background-color: var(--accent-secondary) !important; 
+    border-color: var(--accent-secondary) !important; 
 }
