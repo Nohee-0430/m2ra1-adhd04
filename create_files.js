@@ -28,7 +28,7 @@ const problems = [
             <input type="number" id="num2" class="form-control mb-2" placeholder="Número 2">
             <input type="number" id="num3" class="form-control mb-2" placeholder="Número 3">
             <button class="btn btn-primary mt-2" onclick="calcularPromedio()">Calcular Promedio</button>
-            <p id="res1" class="mt-3" style="font-weight: bold; color: var(--text-primary);"></p>
+            <p id="res1" class="mt-3" style="font-weight: bold; color: green;"></p>
         `,
         script: `
             function calcularPromedio() {
@@ -47,7 +47,7 @@ const problems = [
             <input type="number" id="base" class="form-control mb-2" placeholder="Base">
             <input type="number" id="altura" class="form-control mb-2" placeholder="Altura">
             <button class="btn btn-primary mt-2" onclick="calcularArea()">Calcular Área</button>
-            <p id="res2" class="mt-3" style="font-weight: bold; color: var(--text-primary);"></p>
+            <p id="res2" class="mt-3" style="font-weight: bold; color: green;"></p>
         `,
         script: `
             function calcularArea() {
@@ -64,7 +64,7 @@ const problems = [
         html: `
             <input type="number" id="num" class="form-control mb-2" placeholder="Ingresa un número">
             <button class="btn btn-primary mt-2" onclick="verificarPar()">Verificar</button>
-            <p id="res3" class="mt-3" style="font-weight: bold; color: var(--text-primary);"></p>
+            <p id="res3" class="mt-3" style="font-weight: bold; color: green;"></p>
         `,
         script: `
             function verificarPar() {
@@ -85,7 +85,7 @@ const problems = [
             <input type="number" id="n2" class="form-control mb-2" placeholder="Número 2">
             <input type="number" id="n3" class="form-control mb-2" placeholder="Número 3">
             <button class="btn btn-primary mt-2" onclick="mayorMenor()">Calcular</button>
-            <p id="res4" class="mt-3" style="font-weight: bold; color: var(--text-primary);"></p>
+            <p id="res4" class="mt-3" style="font-weight: bold; color: green;"></p>
         `,
         script: `
             function mayorMenor() {
@@ -105,7 +105,7 @@ const problems = [
             <input type="number" id="basePot" class="form-control mb-2" placeholder="Número (Base)">
             <input type="number" id="exp" class="form-control mb-2" placeholder="Potencia (Exponente)">
             <button class="btn btn-primary mt-2" onclick="calcularPotencia()">Calcular Potencia</button>
-            <p id="res5" class="mt-3" style="font-weight: bold; color: var(--text-primary);"></p>
+            <p id="res5" class="mt-3" style="font-weight: bold; color: green;"></p>
         `,
         script: `
             function calcularPotencia() {
@@ -122,7 +122,7 @@ const problems = [
         html: `
             <input type="text" id="texto" class="form-control mb-2" placeholder="Ingresa un texto">
             <button class="btn btn-primary mt-2" onclick="invertirTexto()">Invertir</button>
-            <p id="res6" class="mt-3" style="font-weight: bold; color: var(--text-primary);"></p>
+            <p id="res6" class="mt-3" style="font-weight: bold; color: green;"></p>
         `,
         script: `
             function invertirTexto() {
@@ -138,7 +138,7 @@ const problems = [
         html: `
             <input type="number" id="numFact" class="form-control mb-2" placeholder="Ingresa un número" min="0">
             <button class="btn btn-primary mt-2" onclick="calcularFactorial()">Calcular Factorial</button>
-            <p id="res7" class="mt-3" style="font-weight: bold; color: var(--text-primary);"></p>
+            <p id="res7" class="mt-3" style="font-weight: bold; color: green;"></p>
         `,
         script: `
             function calcularFactorial() {
@@ -161,7 +161,7 @@ const problems = [
         html: `
             <input type="number" id="numPerf" class="form-control mb-2" placeholder="Ingresa un número" min="1">
             <button class="btn btn-primary mt-2" onclick="verificarPerfecto()">Verificar</button>
-            <p id="res8" class="mt-3" style="font-weight: bold; color: var(--text-primary);"></p>
+            <p id="res8" class="mt-3" style="font-weight: bold; color: green;"></p>
         `,
         script: `
             function verificarPerfecto() {
@@ -188,7 +188,7 @@ const problems = [
         html: `
             <input type="number" id="numPrimo" class="form-control mb-2" placeholder="Ingresa un número" min="1">
             <button class="btn btn-primary mt-2" onclick="verificarPrimo()">Verificar</button>
-            <p id="res9" class="mt-3" style="font-weight: bold; color: var(--text-primary);"></p>
+            <p id="res9" class="mt-3" style="font-weight: bold; color: green;"></p>
         `,
         script: `
             function verificarPrimo() {
@@ -218,7 +218,7 @@ const problems = [
         html: `
             <input type="text" id="textoVocales" class="form-control mb-2" placeholder="Ingresa un texto">
             <button class="btn btn-primary mt-2" onclick="contarVocales()">Contar Vocales</button>
-            <p id="res10" class="mt-3" style="font-weight: bold; color: var(--text-primary);"></p>
+            <p id="res10" class="mt-3" style="font-weight: bold; color: green;"></p>
         `,
         script: `
             function contarVocales() {
@@ -260,6 +260,7 @@ const template = (id, prob) => `<!DOCTYPE html>
 
     <main class="container-practice" style="padding: 20px;">
         ${navBar}
+
         
         <section class="practice-section">
             <div class="solution-card text-center">
@@ -289,4 +290,31 @@ for (let i = 0; i < problems.length; i++) {
     const jsFilename = path.join(dir, 'js', `solucion${i+1}.js`);
     fs.writeFileSync(jsFilename, problems[i].script.trim(), 'utf8');
     console.log(`Creado ${jsFilename}`);
+}
+
+// Update index.html
+const indexPath = path.join(dir, 'index.html');
+let indexHtml = fs.readFileSync(indexPath, 'utf8');
+
+if (!indexHtml.includes('<!-- ENLACES A SOLUCIONES -->')) {
+    let enlacesHtml = `
+        <!-- ENLACES A SOLUCIONES -->
+        <div class="card mt-4" style="margin-bottom: 30px; border-top: 5px solid #007bff;">
+            <div class="card-body text-center">
+                <h5 class="card-title">Soluciones a Problemas Prácticos (JS)</h5>
+                <p class="card-text">Haz clic en cualquiera de los enlaces para ver la solución del problema en JavaScript.</p>
+                <div class="d-flex flex-wrap justify-content-center" style="gap: 10px;">
+`;
+    for(let i=1; i<=10; i++) {
+        enlacesHtml += `                    <a href="solucion${i}.html" class="btn btn-outline-primary">Solución ${i}</a>\n`;
+    }
+    enlacesHtml += `                </div>
+            </div>
+        </div>
+`;
+
+    // Insert right before </main>
+    indexHtml = indexHtml.replace('</main>', enlacesHtml + '\n    </main>');
+    fs.writeFileSync(indexPath, indexHtml, 'utf8');
+    console.log('index.html actualizado');
 }
