@@ -261,8 +261,8 @@ const template = (id, prob) => `<!DOCTYPE html>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; Nohelia Barillas 2024-097536 - Soluciones JS</p>
+    <footer class="footer">
+        <p>&copy; Nohelia Barillas 2024-097536 - M2RA2-ADHD04</p>
     </footer>
 
     <script src="js/bootstrap.bundle.min.js"></script>
