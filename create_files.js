@@ -4,18 +4,18 @@ const path = require('path');
 const dir = process.cwd();
 
 const navBar = `
-        <nav style="text-align: center; margin-bottom: 20px; padding: 15px; background: #fff; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-            <a href="index.html" style="font-weight: bold; margin-right: 15px;">🏠 Volver al Index</a> |
-            <a href="solucion1.html">1</a> |
-            <a href="solucion2.html">2</a> |
-            <a href="solucion3.html">3</a> |
-            <a href="solucion4.html">4</a> |
-            <a href="solucion5.html">5</a> |
-            <a href="solucion6.html">6</a> |
-            <a href="solucion7.html">7</a> |
-            <a href="solucion8.html">8</a> |
-            <a href="solucion9.html">9</a> |
-            <a href="solucion10.html">10</a>
+        <nav style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-bottom: 30px; padding: 20px; background: var(--card-bg); border-radius: 12px; box-shadow: var(--shadow-soft);">
+            <a href="index.html" class="btn btn-outline-primary" style="border-radius: 50px; display: flex; align-items: center; justify-content: center; padding: 8px 20px;">🏠 Menú Principal</a>
+            <a href="solucion1.html" class="btn btn-primary" style="border-radius: 50%; width: 45px; height: 45px; display: flex; align-items: center; justify-content: center; padding: 0;">1</a>
+            <a href="solucion2.html" class="btn btn-primary" style="border-radius: 50%; width: 45px; height: 45px; display: flex; align-items: center; justify-content: center; padding: 0;">2</a>
+            <a href="solucion3.html" class="btn btn-primary" style="border-radius: 50%; width: 45px; height: 45px; display: flex; align-items: center; justify-content: center; padding: 0;">3</a>
+            <a href="solucion4.html" class="btn btn-primary" style="border-radius: 50%; width: 45px; height: 45px; display: flex; align-items: center; justify-content: center; padding: 0;">4</a>
+            <a href="solucion5.html" class="btn btn-primary" style="border-radius: 50%; width: 45px; height: 45px; display: flex; align-items: center; justify-content: center; padding: 0;">5</a>
+            <a href="solucion6.html" class="btn btn-primary" style="border-radius: 50%; width: 45px; height: 45px; display: flex; align-items: center; justify-content: center; padding: 0;">6</a>
+            <a href="solucion7.html" class="btn btn-primary" style="border-radius: 50%; width: 45px; height: 45px; display: flex; align-items: center; justify-content: center; padding: 0;">7</a>
+            <a href="solucion8.html" class="btn btn-primary" style="border-radius: 50%; width: 45px; height: 45px; display: flex; align-items: center; justify-content: center; padding: 0;">8</a>
+            <a href="solucion9.html" class="btn btn-primary" style="border-radius: 50%; width: 45px; height: 45px; display: flex; align-items: center; justify-content: center; padding: 0;">9</a>
+            <a href="solucion10.html" class="btn btn-primary" style="border-radius: 50%; width: 45px; height: 45px; display: flex; align-items: center; justify-content: center; padding: 0;">10</a>
         </nav>
 `;
 
@@ -28,7 +28,7 @@ const problems = [
             <input type="number" id="num2" class="form-control mb-2" placeholder="Número 2">
             <input type="number" id="num3" class="form-control mb-2" placeholder="Número 3">
             <button class="btn btn-primary mt-2" onclick="calcularPromedio()">Calcular Promedio</button>
-            <p id="res1" class="mt-3" style="font-weight: bold; color: green;"></p>
+            <p id="res1" class="mt-3" style="font-weight: bold; color: var(--text-primary);"></p>
         `,
         script: `
             function calcularPromedio() {
@@ -47,7 +47,7 @@ const problems = [
             <input type="number" id="base" class="form-control mb-2" placeholder="Base">
             <input type="number" id="altura" class="form-control mb-2" placeholder="Altura">
             <button class="btn btn-primary mt-2" onclick="calcularArea()">Calcular Área</button>
-            <p id="res2" class="mt-3" style="font-weight: bold; color: green;"></p>
+            <p id="res2" class="mt-3" style="font-weight: bold; color: var(--text-primary);"></p>
         `,
         script: `
             function calcularArea() {
@@ -64,7 +64,7 @@ const problems = [
         html: `
             <input type="number" id="num" class="form-control mb-2" placeholder="Ingresa un número">
             <button class="btn btn-primary mt-2" onclick="verificarPar()">Verificar</button>
-            <p id="res3" class="mt-3" style="font-weight: bold; color: green;"></p>
+            <p id="res3" class="mt-3" style="font-weight: bold; color: var(--text-primary);"></p>
         `,
         script: `
             function verificarPar() {
@@ -85,7 +85,7 @@ const problems = [
             <input type="number" id="n2" class="form-control mb-2" placeholder="Número 2">
             <input type="number" id="n3" class="form-control mb-2" placeholder="Número 3">
             <button class="btn btn-primary mt-2" onclick="mayorMenor()">Calcular</button>
-            <p id="res4" class="mt-3" style="font-weight: bold; color: green;"></p>
+            <p id="res4" class="mt-3" style="font-weight: bold; color: var(--text-primary);"></p>
         `,
         script: `
             function mayorMenor() {
@@ -105,7 +105,7 @@ const problems = [
             <input type="number" id="basePot" class="form-control mb-2" placeholder="Número (Base)">
             <input type="number" id="exp" class="form-control mb-2" placeholder="Potencia (Exponente)">
             <button class="btn btn-primary mt-2" onclick="calcularPotencia()">Calcular Potencia</button>
-            <p id="res5" class="mt-3" style="font-weight: bold; color: green;"></p>
+            <p id="res5" class="mt-3" style="font-weight: bold; color: var(--text-primary);"></p>
         `,
         script: `
             function calcularPotencia() {
@@ -122,7 +122,7 @@ const problems = [
         html: `
             <input type="text" id="texto" class="form-control mb-2" placeholder="Ingresa un texto">
             <button class="btn btn-primary mt-2" onclick="invertirTexto()">Invertir</button>
-            <p id="res6" class="mt-3" style="font-weight: bold; color: green;"></p>
+            <p id="res6" class="mt-3" style="font-weight: bold; color: var(--text-primary);"></p>
         `,
         script: `
             function invertirTexto() {
@@ -138,7 +138,7 @@ const problems = [
         html: `
             <input type="number" id="numFact" class="form-control mb-2" placeholder="Ingresa un número" min="0">
             <button class="btn btn-primary mt-2" onclick="calcularFactorial()">Calcular Factorial</button>
-            <p id="res7" class="mt-3" style="font-weight: bold; color: green;"></p>
+            <p id="res7" class="mt-3" style="font-weight: bold; color: var(--text-primary);"></p>
         `,
         script: `
             function calcularFactorial() {
@@ -161,7 +161,7 @@ const problems = [
         html: `
             <input type="number" id="numPerf" class="form-control mb-2" placeholder="Ingresa un número" min="1">
             <button class="btn btn-primary mt-2" onclick="verificarPerfecto()">Verificar</button>
-            <p id="res8" class="mt-3" style="font-weight: bold; color: green;"></p>
+            <p id="res8" class="mt-3" style="font-weight: bold; color: var(--text-primary);"></p>
         `,
         script: `
             function verificarPerfecto() {
@@ -188,7 +188,7 @@ const problems = [
         html: `
             <input type="number" id="numPrimo" class="form-control mb-2" placeholder="Ingresa un número" min="1">
             <button class="btn btn-primary mt-2" onclick="verificarPrimo()">Verificar</button>
-            <p id="res9" class="mt-3" style="font-weight: bold; color: green;"></p>
+            <p id="res9" class="mt-3" style="font-weight: bold; color: var(--text-primary);"></p>
         `,
         script: `
             function verificarPrimo() {
@@ -218,7 +218,7 @@ const problems = [
         html: `
             <input type="text" id="textoVocales" class="form-control mb-2" placeholder="Ingresa un texto">
             <button class="btn btn-primary mt-2" onclick="contarVocales()">Contar Vocales</button>
-            <p id="res10" class="mt-3" style="font-weight: bold; color: green;"></p>
+            <p id="res10" class="mt-3" style="font-weight: bold; color: var(--text-primary);"></p>
         `,
         script: `
             function contarVocales() {
@@ -242,22 +242,20 @@ const template = (id, prob) => `<!DOCTYPE html>
     <link rel="shortcut icon" href="images/icon_animation.png" type="image/x-icon">
     <style>
         .solution-card {
-            background: white;
+            background: var(--card-bg);
             padding: 30px;
             border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            box-shadow: var(--shadow-soft);
             max-width: 600px;
             margin: 0 auto;
+            border: 1px solid var(--border-color);
         }
     </style>
 </head>
 <body class="bg-gradient-page">
     <header>
-        <div class="header-icon-container">
-            <img src="images/icon_animation.png" alt="Icono" class="header-icon" width="80">
-        </div>
         <h1>Solución ${id}</h1>
-        <p style="color: white; font-size: 1.2rem;">${prob.title}</p>
+        <p style="color: var(--text-secondary); font-size: 1.2rem; margin-top: 10px; font-weight: 600;">${prob.title}</p>
     </header>
 
     <main class="container-practice" style="padding: 20px;">
@@ -265,8 +263,8 @@ const template = (id, prob) => `<!DOCTYPE html>
         
         <section class="practice-section">
             <div class="solution-card text-center">
-                <h3>${prob.title}</h3>
-                <p class="text-muted">${prob.desc}</p>
+                <h3 style="color: var(--text-primary); font-weight: 800;">${prob.title}</h3>
+                <p style="color: var(--text-secondary);">${prob.desc}</p>
                 <div class="mt-4 text-start">
                     ${prob.html}
                 </div>
@@ -291,31 +289,4 @@ for (let i = 0; i < problems.length; i++) {
     const jsFilename = path.join(dir, 'js', `solucion${i+1}.js`);
     fs.writeFileSync(jsFilename, problems[i].script.trim(), 'utf8');
     console.log(`Creado ${jsFilename}`);
-}
-
-// Update index.html
-const indexPath = path.join(dir, 'index.html');
-let indexHtml = fs.readFileSync(indexPath, 'utf8');
-
-if (!indexHtml.includes('<!-- ENLACES A SOLUCIONES -->')) {
-    let enlacesHtml = `
-        <!-- ENLACES A SOLUCIONES -->
-        <div class="card mt-4" style="margin-bottom: 30px; border-top: 5px solid #007bff;">
-            <div class="card-body text-center">
-                <h5 class="card-title">Soluciones a Problemas Prácticos (JS)</h5>
-                <p class="card-text">Haz clic en cualquiera de los enlaces para ver la solución del problema en JavaScript.</p>
-                <div class="d-flex flex-wrap justify-content-center" style="gap: 10px;">
-`;
-    for(let i=1; i<=10; i++) {
-        enlacesHtml += `                    <a href="solucion${i}.html" class="btn btn-outline-primary">Solución ${i}</a>\n`;
-    }
-    enlacesHtml += `                </div>
-            </div>
-        </div>
-`;
-
-    // Insert right before </main>
-    indexHtml = indexHtml.replace('</main>', enlacesHtml + '\n    </main>');
-    fs.writeFileSync(indexPath, indexHtml, 'utf8');
-    console.log('index.html actualizado');
 }
