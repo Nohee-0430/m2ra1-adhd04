@@ -1,6 +1,34 @@
-function calcularPotencia() {
-                let b = parseFloat(document.getElementById('basePot').value) || 0;
-                let e = parseFloat(document.getElementById('exp').value) || 0;
-                let res = Math.pow(b, e);
-                document.getElementById('res5').innerText = b + " elevado a " + e + " es: " + res;
-            }
+class PotenciaNumero {
+    constructor(baseId, exponenteId, resultadoId) {
+        this.base = document.getElementById(baseId);
+        this.exponente = document.getElementById(exponenteId);
+        this.resultado = document.getElementById(resultadoId);
+    }
+
+    obtenerBase() {
+        return parseFloat(this.base.value) || 0;
+    }
+
+    obtenerExponente() {
+        return parseFloat(this.exponente.value) || 0;
+    }
+
+    calcular() {
+        return Math.pow(this.obtenerBase(), this.obtenerExponente());
+    }
+
+    mostrarResultado() {
+        const base = this.obtenerBase();
+        const exponente = this.obtenerExponente();
+        this.resultado.innerText = `${base} elevado a ${exponente} es: ${this.calcular()}`;
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const potencia = new PotenciaNumero('basePot', 'exp', 'res5');
+    const boton = document.getElementById('btnPotencia');
+
+    if (boton) {
+        boton.addEventListener('click', () => potencia.mostrarResultado());
+    }
+});
