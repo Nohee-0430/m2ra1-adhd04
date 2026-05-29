@@ -14,7 +14,7 @@ class TextoInvertido {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    const textoInvertido = new TextoInvertido('texto', 'res6');
+    const textoInvertido = new TextoInvertido('txtInvertir', 'resultadoTextoInvertido');
     const boton = document.getElementById('btnInvertirTexto');
 
     if (boton) {

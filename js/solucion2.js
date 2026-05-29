@@ -1,6 +1,6 @@
 function calcularArea() {
-                let b = parseFloat(document.getElementById('base').value) || 0;
-                let a = parseFloat(document.getElementById('altura').value) || 0;
+                let b = parseFloat(document.getElementById('numBase').value) || 0;
+                let a = parseFloat(document.getElementById('numAltura').value) || 0;
                 let area = (b * a) / 2;
-                document.getElementById('res2').innerText = "El área es: " + area;
+                document.getElementById('resultadoArea').innerText = "El área es: " + area;
             }

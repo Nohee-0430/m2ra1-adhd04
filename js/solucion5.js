@@ -25,8 +25,8 @@ class PotenciaNumero {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    const potencia = new PotenciaNumero('basePot', 'exp', 'res5');
-    const boton = document.getElementById('btnPotencia');
+    const potencia = new PotenciaNumero('numBasePotencia', 'numExponentePotencia', 'resultadoPotencia');
+    const boton = document.getElementById('btnCalcularPotencia');
 
     if (boton) {
         boton.addEventListener('click', () => potencia.mostrarResultado());

@@ -1,7 +1,7 @@
 function verificarPerfecto() {
-                let n = parseInt(document.getElementById('numPerf').value) || 0;
+                let n = parseInt(document.getElementById('numPerfecto').value) || 0;
                 if (n <= 0) {
-                    document.getElementById('res8').innerText = "Ingresa un número positivo.";
+                    document.getElementById('resultadoPerfecto').innerText = "Ingresa un número positivo.";
                     return;
                 }
                 let suma = 0;
@@ -9,8 +9,8 @@ function verificarPerfecto() {
                     if (n % i === 0) suma += i;
                 }
                 if (suma === n) {
-                    document.getElementById('res8').innerText = n + " es un número Perfecto.";
+                    document.getElementById('resultadoPerfecto').innerText = n + " es un número Perfecto.";
                 } else {
-                    document.getElementById('res8').innerText = n + " NO es un número Perfecto.";
+                    document.getElementById('resultadoPerfecto').innerText = n + " NO es un número Perfecto.";
                 }
             }

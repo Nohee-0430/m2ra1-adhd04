@@ -1,7 +1,7 @@
 function verificarPrimo() {
                 let n = parseInt(document.getElementById('numPrimo').value) || 0;
                 if (n <= 1) {
-                    document.getElementById('res9').innerText = n + " NO es un número Primo.";
+                    document.getElementById('resultadoPrimo').innerText = n + " NO es un número Primo.";
                     return;
                 }
                 let esPrimo = true;
@@ -12,8 +12,8 @@ function verificarPrimo() {
                     }
                 }
                 if (esPrimo) {
-                    document.getElementById('res9').innerText = n + " es un número Primo.";
+                    document.getElementById('resultadoPrimo').innerText = n + " es un número Primo.";
                 } else {
-                    document.getElementById('res9').innerText = n + " NO es un número Primo.";
+                    document.getElementById('resultadoPrimo').innerText = n + " NO es un número Primo.";
                 }
             }

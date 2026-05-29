@@ -32,8 +32,8 @@ class FactorialNumero {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    const factorial = new FactorialNumero('numFact', 'res7');
-    const boton = document.getElementById('btnFactorial');
+    const factorial = new FactorialNumero('numFactorial', 'resultadoFactorial');
+    const boton = document.getElementById('btnCalcularFactorial');
 
     if (boton) {
         boton.addEventListener('click', () => factorial.mostrarResultado());

@@ -24,8 +24,8 @@ class PromedioTresNumeros {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    const promedio = new PromedioTresNumeros('num1', 'num2', 'num3', 'res1');
-    const boton = document.getElementById('btnPromedio');
+    const promedio = new PromedioTresNumeros('numPromedioUno', 'numPromedioDos', 'numPromedioTres', 'resultadoPromedio');
+    const boton = document.getElementById('btnCalcularPromedio');
 
     if (boton) {
         boton.addEventListener('click', () => promedio.mostrarResultado());

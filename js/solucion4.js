@@ -29,8 +29,8 @@ class MayorMenorTresNumeros {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    const mayorMenor = new MayorMenorTresNumeros('n1', 'n2', 'n3', 'res4');
-    const boton = document.getElementById('btnMayorMenor');
+    const mayorMenor = new MayorMenorTresNumeros('numMayorMenorUno', 'numMayorMenorDos', 'numMayorMenorTres', 'resultadoMayorMenor');
+    const boton = document.getElementById('btnCalcularMayorMenor');
 
     if (boton) {
         boton.addEventListener('click', () => mayorMenor.mostrarResultado());
